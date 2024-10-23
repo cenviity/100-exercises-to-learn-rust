@@ -18,7 +18,7 @@ if number < 5 {
 }
 ```
 
-This program will print `number is smaller than 5` because the condition `number < 5` is true.
+This program will print `` `number` is smaller than 5 `` because the condition `number < 5` is true.
 
 ### `else` clauses
 
