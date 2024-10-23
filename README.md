@@ -1,3 +1,11 @@
+# Hi there!
+
+This is my fork with solutions to the Rust exercises. The `main` branch tracks the [upstream repo](https://github.com/mainmatter/100-exercises-to-learn-rust).
+
+— Vincent Ging Ho Yim [@cenviity](https://github.com/cenviity)
+
+---
+
 # Learn Rust, one exercise at a time
 
 You've heard about Rust, but you never had the chance to try it out?\
