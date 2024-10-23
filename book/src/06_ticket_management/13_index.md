@@ -34,4 +34,4 @@ It has:
 
 Notice how the `index` method doesn't return an `Option`. The assumption is that
 `index` will panic if you try to access an element that's not there, as it happens
-for array and vec indexing.
+for array and `Vec` indexing.

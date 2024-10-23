@@ -22,9 +22,9 @@ impl Status {
 }
 ```
 
-A `match` statement that lets you compare a Rust value against a series of **patterns**.\
+A `match` statement lets you compare a Rust value against a series of **patterns**.\
 You can think of it as a type-level `if`. If `Status` is a `Done` variant, execute the first block;
-if it's a `InProgress` or `ToDo` variant, execute the second block.
+if it's an `InProgress` or `ToDo` variant, execute the second block.
 
 ## Exhaustiveness
 

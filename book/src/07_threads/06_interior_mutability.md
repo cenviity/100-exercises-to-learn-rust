@@ -52,7 +52,7 @@ Let's be clear, though: `UnsafeCell` isn't a magic wand that allows you to ignor
 `unsafe` code is still subject to Rust's rules about borrowing and aliasing.
 It's an (advanced) tool that you can leverage to build **safe abstractions** whose safety can't be directly expressed
 in Rust's type system. Whenever you use the `unsafe` keyword you're telling the compiler:
-"I know what I'm doing, I won't violate your invariants, trust me."
+"I know what I'm doing. I won't violate your invariants. Trust me."
 
 Every time you call an `unsafe` function, there will be documentation explaining its **safety preconditions**:
 under what circumstances it's safe to execute its `unsafe` block. You can find the ones for `UnsafeCell`
@@ -66,7 +66,7 @@ every day in Rust.
 
 Let's go through a couple of important `std` types that leverage interior mutability.\
 These are types that you'll encounter somewhat often in Rust code, especially if you peek under the hood of
-some the libraries you use.
+some of the libraries you use.
 
 ### Reference counting
 

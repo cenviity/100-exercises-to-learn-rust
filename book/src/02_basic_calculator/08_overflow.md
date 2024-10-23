@@ -23,7 +23,7 @@ But the _mathematically correct result_ doesn't fit into that integer type!
 
 ## No automatic promotion
 
-One possible approach would be automatically promote the result to a bigger integer type.
+One possible approach would be to automatically promote the result to a bigger integer type.
 E.g. if you're summing two `u8` integers and the result is 256 (`u8::MAX + 1`), Rust could choose to interpret the
 result as `u16`, the next integer type that's big enough to hold 256.
 

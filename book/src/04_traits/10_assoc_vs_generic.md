@@ -52,7 +52,7 @@ impl From<u16> for WrappingU32 {
 ```
 
 This works because `From<u16>` and `From<u32>` are considered **different traits**.\
-There is no ambiguity: the compiler can determine which implementation to use based on type of the value being converted.
+There is no ambiguity: the compiler can determine which implementation to use based on the type of the value being converted.
 
 ## Case study: `Add`
 

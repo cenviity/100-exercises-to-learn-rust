@@ -29,7 +29,7 @@ Functions in Rust are defined using the `fn` keyword, followed by the function's
 return type.
 The function's body is enclosed in curly braces `{}`.
 
-In previous exercise, you saw the `greeting` function:
+In the previous exercise, you saw the `greeting` function:
 
 ```rust
 // `fn` <function_name> ( <input params> ) -> <return_type> { <body> }
@@ -105,7 +105,7 @@ If there are multiple input parameters, they must be separated with commas.
 
 ### Type annotations
 
-Since we've been mentioned "types" a few times, let's state it clearly: Rust is a **statically typed language**.\
+Since we've mentioned "types" a few times, let's state it clearly: Rust is a **statically typed language**.\
 Every single value in Rust has a type and that type must be known to the compiler at compile time.
 
 Types are a form of **static analysis**.\

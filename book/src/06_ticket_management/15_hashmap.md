@@ -47,7 +47,7 @@ Let's dig into those two.
 
 ## `Hash`
 
-A hashing function (or hasher) maps a potentially infinite set of a values (e.g.
+A hashing function (or hasher) maps a potentially infinite set of values (e.g.
 all possible strings) to a bounded range (e.g. a `u64` value).\
 There are many different hashing functions around, each with different properties
 (speed, collision risk, reversibility, etc.).
