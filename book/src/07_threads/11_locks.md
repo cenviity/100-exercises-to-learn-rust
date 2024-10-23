@@ -1,7 +1,7 @@
 # Locks, `Send` and `Arc`
 
 The patching strategy you just implemented has a major drawback: it's racy.\
-If two clients send patches for the same ticket roughly at same time, the server will apply them in an arbitrary order.
+If two clients send patches for the same ticket roughly at the same time, the server will apply them in an arbitrary order.
 Whoever enqueues their patch last will overwrite the changes made by the other client.
 
 ## Version numbers
@@ -31,7 +31,7 @@ it allows only one thread to access the data, no matter if it's for reading or w
 
 `Mutex<T>` wraps the data it protects, and it's therefore generic over the type of the data.\
 You can't access the data directly: the type system forces you to acquire a lock first using either `Mutex::lock` or
-`Mutex::try_lock`. The former blocks until the lock is acquired, the latter returns immediately with an error if the lock
+`Mutex::try_lock`. The former blocks until the lock is acquired; the latter returns immediately with an error if the lock
 can't be acquired.\
 Both methods return a guard object that dereferences to the data, allowing you to modify it. The lock is released when
 the guard is dropped.
@@ -194,7 +194,7 @@ use std::sync::Arc;
 let data: Arc<u32> = Arc::new(0);
 let data_clone = Arc::clone(&data);
 
-// `Arc<T>` implements `Deref<T>`, so can convert 
+// `Arc<T>` implements `Deref<T>`, so we can convert 
 // a `&Arc<T>` to a `&T` using deref coercion
 let data_ref: &u32 = &data;
 ```

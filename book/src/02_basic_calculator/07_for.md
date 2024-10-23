@@ -17,7 +17,7 @@ for <element> in <iterator> {
 
 ## Ranges
 
-Rust's standard library provides **range** type that can be used to iterate over a sequence of numbers[^weird-ranges].
+Rust's standard library provides a **range** type that can be used to iterate over a sequence of numbers[^weird-ranges].
 
 For example, if we want to sum the numbers from 1 to 5:
 

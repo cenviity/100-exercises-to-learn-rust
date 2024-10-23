@@ -90,7 +90,7 @@ ongoing asynchronous **tasks**. In particular, they balance two different goals:
 
 ### No default runtime
 
-Rust is fairly unique in its approach to asynchronous programing: there is
+Rust is fairly unique in its approach to asynchronous programming: there is
 no default runtime. The standard library doesn't ship with one. You need to
 bring your own!
 

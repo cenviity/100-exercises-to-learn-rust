@@ -77,7 +77,7 @@ All these things are true at the same time for Rust:
 3. You can't cause dangling pointers, double frees, and other memory-related bugs
 
 Languages like Python, JavaScript, and Java give you 2. and 3., but not 1.\
-Language like C or C++ give you 1., but neither 2. nor 3.
+Languages like C and C++ give you 1., but neither 2. nor 3.
 
 Depending on your background, 3. might sound a bit arcane: what is a "dangling pointer"?
 What is a "double free"? Why are they dangerous?\
@@ -185,7 +185,7 @@ All these restrictions are enforced at compile time by the borrow checker.
 ### Syntax
 
 How do you borrow a value, in practice?\
-By adding `&` or `&mut` **in front a variable**, you're borrowing its value.
+By adding `&` or `&mut` **in front of a variable**, you're borrowing its value.
 Careful though! The same symbols (`&` and `&mut`) **in front of a type** have a different meaning:
 they denote a different type, a reference to the original type.
 
@@ -209,8 +209,8 @@ fn main() {
     // the `&` operator.
     // Same symbol (`&`), different meaning depending on the context!
     let b: &u32 = &config.version;
-    //     ^ The type annotation is not necessary, 
-    //       it's just there to clarify what's going on
+    //     ^ The type annotation is not necessary. 
+    //       It's just there to clarify what's going on.
 }
 ```
 

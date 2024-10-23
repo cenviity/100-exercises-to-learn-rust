@@ -5,7 +5,7 @@ Before we wrap up this chapter, let's talk about another key trait in Rust's sta
 `Sync` is an auto trait, just like `Send`.\
 It is automatically implemented by all types that can be safely **shared** between threads.
 
-In order words: `T: Sync` means that `&T` is `Send`.
+In other words: `T: Sync` means that `&T` is `Send`.
 
 ## `Sync` doesn't imply `Send`
 

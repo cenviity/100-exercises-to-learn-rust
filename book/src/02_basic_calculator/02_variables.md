@@ -58,7 +58,7 @@ fn add_one(x: u32) -> u32 {
 ```
 
 In the example above, `x` is a variable of type `u32`.\
-The only difference between `x` and a variable declared with `let` is that functions arguments **must** have their type
+The only difference between `x` and a variable declared with `let` is that function arguments **must** have their type
 explicitly declared. The compiler won't infer it for you.\
 This constraint allows the Rust compiler (and us humans!) to understand the function's signature without having to look
 at its implementation. That's a big boost for compilation speed[^speed]!
