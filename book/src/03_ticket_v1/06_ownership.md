@@ -186,7 +186,7 @@ All these restrictions are enforced at compile time by the borrow checker.
 
 How do you borrow a value, in practice?\
 By adding `&` or `&mut` **in front a variable**, you're borrowing its value.
-Careful though! The same symbols (`&` and `&mut`) in **front of a type** have a different meaning:
+Careful though! The same symbols (`&` and `&mut`) **in front of a type** have a different meaning:
 they denote a different type, a reference to the original type.
 
 For example:
