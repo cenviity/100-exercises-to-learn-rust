@@ -7,16 +7,17 @@
 pub struct Ticket {
     title: String,
     description: String,
+    #[allow(unused)]
     status: String,
 }
 
 impl Ticket {
     pub fn title(&self) -> &str {
-        todo!()
+        self.title.trim()
     }
 
     pub fn description(&self) -> &str {
-        todo!()
+        self.description.trim()
     }
 }
 
