@@ -29,7 +29,7 @@ if it's a `InProgress` or `ToDo` variant, execute the second block.
 ## Exhaustiveness
 
 There's one key detail here: `match` is **exhaustive**. You must handle all enum variants.\
-If you forget to handle a variant, Rust will stop you **at compile-time** with an error.
+If you forget to handle a variant, Rust will stop you **at compile time** with an error.
 
 E.g. if we forget to handle the `ToDo` variant:
 

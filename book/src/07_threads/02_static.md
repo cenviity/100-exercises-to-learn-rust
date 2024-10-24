@@ -104,7 +104,7 @@ The most common case is a reference to **static data**, such as string literals:
 let s: &'static str = "Hello world!";
 ```
 
-Since string literals are known at compile-time, Rust stores them _inside_ your executable,
+Since string literals are known at compile time, Rust stores them _inside_ your executable,
 in a region known as **read-only data segment**.
 All references pointing to that region will therefore be valid for as long as
 the program runs; they satisfy the `'static` contract.

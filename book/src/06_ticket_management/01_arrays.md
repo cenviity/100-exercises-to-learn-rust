@@ -61,7 +61,7 @@ assert_eq!(numbers.get(3), None);
 
 ### Performance
 
-Since the size of an array is known at compile-time, the compiler can allocate the array on the stack.
+Since the size of an array is known at compile time, the compiler can allocate the array on the stack.
 If you run the following code:
 
 ```rust

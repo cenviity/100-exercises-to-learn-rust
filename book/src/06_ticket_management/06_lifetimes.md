@@ -31,7 +31,7 @@ pub struct Iter<'a, T> { /* fields omitted */ }
 
 Lifetimes are **labels** used by the Rust compiler to keep track of how long a reference (either mutable or
 immutable) is valid.\
-The lifetime of a reference is constrained by the scope of the value it refers to. Rust always makes sure, at compile-time,
+The lifetime of a reference is constrained by the scope of the value it refers to. Rust always makes sure, at compile time,
 that references are not used after the value they refer to has been dropped, to avoid dangling pointers and use-after-free bugs.
 
 This should sound familiar: we've already seen these concepts in action when we discussed ownership and borrowing.

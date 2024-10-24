@@ -1,6 +1,6 @@
 # Vectors
 
-Arrays' strength is also their weakness: their size must be known upfront, at compile-time.
+Arrays' strength is also their weakness: their size must be known upfront, at compile time.
 If you try to create an array with a size that's only known at runtime, you'll get a compilation error:
 
 ```rust
@@ -17,7 +17,7 @@ error[E0435]: attempt to use a non-constant value in a constant
   |                    ^ non-constant value
 ```
 
-Arrays wouldn't work for our ticket management system—we don't know how many tickets we'll need to store at compile-time.
+Arrays wouldn't work for our ticket management system—we don't know how many tickets we'll need to store at compile time.
 This is where `Vec` comes in.
 
 ## `Vec`

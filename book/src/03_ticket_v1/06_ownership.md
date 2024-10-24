@@ -87,7 +87,7 @@ For now, though, let's focus on learning how to work within Rust's ownership sys
 
 ## The owner
 
-In Rust, each value has an **owner**, statically determined at compile-time.
+In Rust, each value has an **owner**, statically determined at compile time.
 There is only one owner for each value at any given time.
 
 ## Move semantics
@@ -180,7 +180,7 @@ To ensure these two properties, Rust has to introduce some restrictions on refer
 In a way, you can think of an immutable reference as a "read-only" lock on the value,
 while a mutable reference is like a "read-write" lock.
 
-All these restrictions are enforced at compile-time by the borrow checker.
+All these restrictions are enforced at compile time by the borrow checker.
 
 ### Syntax
 
