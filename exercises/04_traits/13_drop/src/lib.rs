@@ -15,7 +15,7 @@ mod tests {
 
     #[test]
     fn test_defused_drop_bomb() {
-        let mut bomb = DropBomb::new();
+        let bomb = DropBomb::new();
         bomb.defuse();
         // The bomb should not panic when dropped
         // since it has been defused
