@@ -9,7 +9,7 @@ impl Ticket {
             Status::InProgress { assigned_to } => assigned_to,
             Status::Done | Status::ToDo => {
                 panic!(
-                    "Only `In-Progress` tickets can be \
+                    "Only `InProgress` tickets can be \
                     assigned to someone"
                 )
             }
@@ -37,7 +37,7 @@ impl Ticket {
             assigned_to
         } else {
             panic!(
-                "Only `In-Progress` tickets can be assigned to someone"
+                "Only `InProgress` tickets can be assigned to someone"
             );
         }
     }
@@ -54,7 +54,7 @@ impl Ticket {
     pub fn assigned_to(&self) -> &str {
         let Status::InProgress { assigned_to } = &self.status else {
             panic!(
-                "Only `In-Progress` tickets can be assigned to someone"
+                "Only `InProgress` tickets can be assigned to someone"
             );
         };
         assigned_to

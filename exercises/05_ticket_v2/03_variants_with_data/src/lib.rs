@@ -48,14 +48,14 @@ mod tests {
     use common::{valid_description, valid_title};
 
     #[test]
-    #[should_panic(expected = "Only `In-Progress` tickets can be assigned to someone")]
+    #[should_panic(expected = "Only `InProgress` tickets can be assigned to someone")]
     fn test_todo() {
         let ticket = Ticket::new(valid_title(), valid_description(), Status::ToDo);
         ticket.assigned_to();
     }
 
     #[test]
-    #[should_panic(expected = "Only `In-Progress` tickets can be assigned to someone")]
+    #[should_panic(expected = "Only `InProgress` tickets can be assigned to someone")]
     fn test_done() {
         let ticket = Ticket::new(valid_title(), valid_description(), Status::Done);
         ticket.assigned_to();
