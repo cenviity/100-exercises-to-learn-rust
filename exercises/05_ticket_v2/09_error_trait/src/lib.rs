@@ -3,28 +3,53 @@
 //  The docs for the `std::fmt` module are a good place to start and look for examples:
 //  https://doc.rust-lang.org/std/fmt/index.html#write
 
-enum TicketNewError {
+use std::{error::Error, fmt::Display};
+
+#[derive(Debug)]
+pub enum TicketNewError {
     TitleError(String),
     DescriptionError(String),
 }
+
+impl Display for TicketNewError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let msg = match self {
+            TicketNewError::TitleError(msg) => msg,
+            TicketNewError::DescriptionError(msg) => msg,
+        };
+        write!(f, "{msg}")
+    }
+}
+
+impl Error for TicketNewError {}
 
 // TODO: `easy_ticket` should panic when the title is invalid, using the error message
 //   stored inside the relevant variant of the `TicketNewError` enum.
 //   When the description is invalid, instead, it should use a default description:
 //   "Description not provided".
-fn easy_ticket(title: String, description: String, status: Status) -> Ticket {
-    todo!()
+pub fn easy_ticket(title: String, description: String, status: Status) -> Ticket {
+    let ticket = Ticket::new(title.clone(), description, status.clone());
+    match ticket {
+        Ok(ticket) => ticket,
+        Err(e) => match e {
+            TicketNewError::TitleError(_) => panic!("{e}"),
+            TicketNewError::DescriptionError(_) => {
+                let description = "Description not provided".into();
+                easy_ticket(title, description, status)
+            }
+        },
+    }
 }
 
 #[derive(Debug, PartialEq, Clone)]
-struct Ticket {
+pub struct Ticket {
     title: String,
     description: String,
     status: Status,
 }
 
 #[derive(Debug, PartialEq, Clone)]
-enum Status {
+pub enum Status {
     ToDo,
     InProgress { assigned_to: String },
     Done,
