@@ -49,7 +49,7 @@ let mut guard = lock.lock().unwrap();
 // leveraging its `Deref` implementation
 *guard += 1;
 
-// The lock is released when `data` goes out of scope
+// The lock is released when `guard` goes out of scope
 // This can be done explicitly by dropping the guard
 // or happen implicitly when the guard goes out of scope
 drop(guard)
