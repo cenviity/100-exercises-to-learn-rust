@@ -38,3 +38,9 @@ impl TicketStore {
         self.tickets.get(&id).cloned()
     }
 }
+
+impl Default for TicketStore {
+    fn default() -> Self {
+        Self::new()
+    }
+}
